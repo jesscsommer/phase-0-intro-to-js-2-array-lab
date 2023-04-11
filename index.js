@@ -5,16 +5,10 @@ const destructivelyPrependCat = name => cats.unshift(name);
 const destructivelyRemoveFirstCat = () => cats.shift();
 const destructivelyRemoveLastCat = () => cats.pop();
 
-const appendCat = name => {
-    const newCats = [...cats, name];
-    return newCats;
- }
+const appendCat = name => [...cats, name];
  
- const prependCat = name => {
-    const newCats = [name, ...cats];
-    return newCats;
- }
- 
- const removeFirstCat = () => cats.slice(1);
- 
- const removeLastCat = () => cats.slice(0, -1);
+const prependCat = name => [name, ...cats];
+
+const removeFirstCat = () => cats.slice(1);
+
+const removeLastCat = () => cats.slice(0, -1);
