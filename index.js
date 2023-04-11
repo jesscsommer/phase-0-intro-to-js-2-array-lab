@@ -15,14 +15,6 @@ const appendCat = name => {
     return newCats;
  }
  
- const removeFirstCat = () => {
-    const newCats = [...cats];
-    newCats.shift();
-    return newCats;
- }
+ const removeFirstCat = () => cats.slice(1);
  
- const removeLastCat = () => {
-    const newCats = [...cats];
-    newCats.pop();
-    return newCats;
- }
+ const removeLastCat = () => cats.slice(0, -1);
