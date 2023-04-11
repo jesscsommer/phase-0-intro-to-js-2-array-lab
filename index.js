@@ -6,14 +6,12 @@ const destructivelyRemoveFirstCat = () => cats.shift();
 const destructivelyRemoveLastCat = () => cats.pop();
 
 const appendCat = name => {
-    const newCats = [...cats];
-    newCats.push(name);
+    const newCats = [...cats, name];
     return newCats;
  }
  
  const prependCat = name => {
-    const newCats = [...cats];
-    newCats.unshift(name);
+    const newCats = [name, ...cats];
     return newCats;
  }
  
